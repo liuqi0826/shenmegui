@@ -8,6 +8,10 @@ import (
 
 var ResourceManagerInstance *ResourceManager
 
+func init() {
+	ResourceManagerInstance = new(ResourceManager)
+}
+
 type ResourceManager struct {
 	sync.Mutex
 	events.EventDispatcher
